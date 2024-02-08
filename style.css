@@ -1,0 +1,333 @@
+body{ /*or * */
+    margin: 0;
+    background-color: #000;
+    color: white;
+    border: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /*SROLLBAR DISAPPEARS WHEN OUR CONTENT OVERFLOWS; WE CANNOT SCROLL OUR REMAINING CONTENT UNLESS WE USE OVERFLOW:scroll*/
+} /*overflow:scroll only for our maincontent, hence for our entire body:hidden */
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 0.5rem; /*breathing space from all sides since body margin is 0*/
+}
+ 
+/*SIDEBAR**/
+.sidebar{
+    background-color: black;
+    width: 340px;
+    border-radius: 1rem; /*=16px*/
+    margin-right: 0.5rem; /*breathing space*/
+}
+/*NAVBAR*/
+.navbar{
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*vertically center since direction:column*/
+    height: 100px;
+    padding: 0.5rem 0.75rem; /*=8px 12px 1rem=16px*/
+}
+.nav-option{
+    line-height: 2.5rem; /*40px*/
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav-option i{
+    font-size: 1.25rem;/*15px*/
+}
+.nav-option a{
+    font-size: 1rem;/*15px*/
+    margin-left: 1rem; /*FOR SPACE BETWEEN ICON AND ANCHOR*/
+}
+
+/*LIBRARY SECTION*/
+.lib{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.3rem;
+    padding: 0.5rem 0.75rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+.lib-option{
+    opacity: 0.5;
+}
+.lib-option i{
+ font-size: 1.25rem;
+ 
+}
+.lib-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+.icons i{
+    opacity: 0.5;
+}
+
+/*LIBRARY CARDS*/
+.box{
+    background-color: #232323;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0.75rem 0;
+    padding: 0.75rem 1rem;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+    
+}
+.badge{
+    cursor: pointer;
+    font-weight: 750;
+    border: none;
+    border-radius: 100px;
+    margin-top: 0.5rem;
+    padding: 0.25rem 1rem; /*15px 16px*/
+    height: 2rem;
+    width: fit-content; /*to fit content in the capsule badge*/
+}
+
+/*MAIN CONTENT*/
+.main-content{
+    background-color: #121212 ;
+    flex:1; /*to occupy remaining space*/
+    border-radius: 1rem; /*=16px*/
+    overflow: auto; /*not scroll, bcuz jb content hoga tbhi scroll chahiye*/
+    padding: 0 1.5rem 0 1.5rem;
+   
+}
+.main-head{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+.main-icons{
+    margin-left: 0.75rem;
+}
+.main-icons i{
+    font-size: 1.25rem;
+}
+.main-search{
+    margin-left: 0;
+}
+input{
+    border: none;
+    background-color: #232323;
+    border-radius: 1rem;
+    width: 15rem;
+    margin: 1rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.main-others{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    /* margin-left: 0.5rem; */
+    /* margin-right: 2rem; */
+}
+
+.main-others button, i{
+    padding: 1rem;
+    cursor: pointer;
+}
+.main-others .badge{
+    
+    height: 2rem;
+    width: fit-content;
+   padding: 0.25rem 1rem;
+}
+.main-others i{
+  padding: 0.5rem 0.1rem;
+
+}
+.main-others .other-div button{
+    margin: 1rem;
+}
+.main-others .icon-div i{
+    margin: 1rem;
+    /* margin-right: 0.7rem;
+    margin-right: 0.7rem; */
+}
+
+@media (max-width: 1000px) { /*nitpicking hiding install and left arrow when width<1000*/
+    .hide{
+        display: none;
+    }
+}
+
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card{
+    background-color: #232323;
+    width:150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    transition: 0.3s ease;
+}
+.cards .trending{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards .featured{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.card-title{
+    font-weight: 600;
+}
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-info{
+    font-weight: 0.85rem;
+    opacity: 0.5;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 9px #615f5f;
+}
+
+/*footer*/
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+.music-player{
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .album{
+    width: 25%;
+} */
+.player{
+    width: 75%;
+}
+
+
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-controls i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+    margin-left: 2rem;
+}
+.player-controls i:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30rem;
+}
+.progress-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+    
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+   width: 1rem;
+   background-color: #1bd760;
+   margin-bottom: 29px;
+   border-radius: 50%;
+
+}
+
+.controls{
+    width: 25%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+   
+}
+
+.controls .icon-controls{
+    color: #ddd;
+}
+.controls .svg i{
+    width: 32px;
+    height: 32px;
+    color:#ddd;
+}
+.vol-controls{
+    display: flex;
+}
+.vol-controls .line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
