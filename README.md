@@ -1,2 +1,2 @@
 # Spotify_Clone
-Designing the preview page of Spotify website using HTML CSS AND JAVASCRIPT 
+Designing the replica Spotify website using HTML and CSS
